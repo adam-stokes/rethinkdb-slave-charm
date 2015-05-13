@@ -1,3 +1,4 @@
 #!/bin/bash
 ./hooks/install
-./hooks/config-changed
+./hooks/rethinkdb-master-relation-joined
+./hooks/start
