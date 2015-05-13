@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ux
+
+MASTER_HOST=`relation-get master_host`
+
+./start
+
+juju-log $JUJU_REMOTE_UNIT joined
