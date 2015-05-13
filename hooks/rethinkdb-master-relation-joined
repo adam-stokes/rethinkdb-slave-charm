@@ -4,8 +4,7 @@ set -ux
 
 MASTER_HOST=`relation-get master_host`
 
-sed -i.bak -e "s/\# bind.*/bind=all/" /etc/rethinkdb/instances.d/instance1.conf
-sed -i.bak -e "s/\# join.*/join=${MASTER_HOST}/" /etc/rethinkdb/instances.d/instance1.conf
+echo 'join=${MASTER_HOST}' >> /etc/rethinkdb/instances.d/instance1.conf
 
 ./hooks/start
 
